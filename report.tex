@@ -100,7 +100,7 @@ The dark higgs boson in particular is motivated by the need to generate the mass
 
 The model presented in \cite{dark_higgs} considers a scenario in which there is another dark sector mediator - taken to be the $Z'$ - with a mass within the range accessible to measurement at the LHC, which mediates dark matter production from parton collisions. In this case, the $Z'$ could radiate a dark higgs boson. Theoretically, the observed relic abundance of dark matter in the universe suggests that couplings between particles in the dark sector should be quite large, which could result in a sufficiently high probability of dark higgs emission from the $Z'$ to produce a measurable signature in LHC collisions \cite{dark_higgs}. 
 
-Experimentally, the dark higgs signature would be distinct from generic mono-X signatures where the SM particle that the dark matter recoils against is produced via initial state radiation, because as long as the combined mass of the $Z'$ and $s$ is well below the typical momentum transfer of the collisions, the $s$ will tend to be highly boosted in the plane transverse to the beam line. As a result, the SM decay products will tend to be much higher in transverse momentum and highly collimated compared with particles produced via initial state radiation.  
+Experimentally, the dark higgs signature would be distinct from generic mono-X signatures where the SM particle that the dark matter recoils against is produced via initial state radiation, because as long as the mass of the $s$ is well below the typical momentum transfer of the collisions, the $s$ will tend to be highly boosted in the plane transverse to the beam line. As a result, the SM decay products will tend to be much higher in transverse momentum and highly collimated compared with particles produced via initial state radiation.  
 
 \subsection{Experimental Background}
 
@@ -176,7 +176,7 @@ The ATLAS detector, shown schematically in figure \ref{fig:detector}, provides f
 
 \subsection{The Inner Detector}
 
-The inner detector (ID), located nearest the the beam pipe, is specialized for charged particle tracking. It is immersed in a 2T magnetic field oriented parallel to the beam pipe, which bends the trajectories of electrically charged particles as they pass through the field. Three distinct but complementary tracking technologies are employed along with pattern recognition tools to map the trajectories of charged particles passing through the ID. These reconstructed tracks are a critical component of vertex reconstruction, and the degree and direction of bent tracks provide information about the momentum, charge, and identity of the charged particles that produced them. 
+The inner detector (ID), located nearest the the beam pipe, is specialized for charged particle tracking. It is immersed in a 2T magnetic field oriented parallel to the beam pipe, which bends the trajectories of electrically charged particles as they pass through the field. Three distinct but complementary tracking technologies are employed along with pattern recognition tools to map the trajectories of charged particles passing through the ID. These reconstructed tracks are a critical component of vertex reconstruction, and the degree of bending and direction of the bent tracks at the production vertex provide information about the momentum, charge, and identity of the charged particles that produced them. 
 
 \subsection{The Calorimeter}
 
@@ -184,7 +184,7 @@ The calorimeter is designed to measure the energy of all particles which pass th
 
 \subsubsection{Electromagnetic Calorimeter}
 
-The electromagnetic (EM) calorimeter forms the inner calorimeter layer, and is designed to fully absorb and measure the energy of electrons and photons. Energy is deposited in the iron-steel absorbing layers in the form of EM showers \cite{em_showers}, in which the initial electron or photon interacts with the absorbing material to produce a cascade of photon radiation and electron pair production. The sampling layers are filled with liquid argon (LAr), with sensors to measure the ionization produced by charged particles passing through the LAr \cite{em_cal}. 
+The electromagnetic (EM) calorimeter forms the inner calorimeter layer, and is designed to fully absorb and measure the energies of electrons and photons. Energy is deposited in the iron-steel absorbing layers in the form of EM showers \cite{em_showers}, in which the initial electron or photon interacts with the absorbing material to produce a cascade of photon radiation and electron pair production. The sampling layers are filled with liquid argon (LAr), with sensors to measure the ionization produced by charged particles passing through the LAr \cite{em_cal}. 
 
 \subsubsection{Hadronic Calorimeter}
 
@@ -194,15 +194,45 @@ The hadronic calorimeter is comprised of a tile calorimeter which encircles the 
 
 \subsection{The Muon Spectrometer}
 
-The muon spectrometer \cite{atlas} surrounding the calorimeter is specialized for tracking muons and measuring their momentum. It employs the same principle used in the inner detector of applying a strong magnetic field and measuring the resulting bent tracks of the electrically charged muons passing through to infer their momentum. 
+The muon spectrometer \cite{atlas} surrounding the calorimeter is specialized for tracking muons and measuring their momentum. It employs the same principle used in the inner detector of applying a strong magnetic field and measuring the resulting bent trajectories of the electrically charged muons passing through to infer their momentum. 
 
-The magnetic field is generated by rectangular superconducting ``toroid magnets" arranged radially around the beam axis, which set up a toroidal field concentric to the beam axis. In the region containing the strong field established by the toroid magnets, muon tracks are recorded by three cylindrical layers of muon tracking chambers in the barrel region and three layers of chambers arranged in wheels perpendicular to the beam axis in the end-cap region. Additional layers of fast trigger chambers deliver muon track information to the ATLAS trigger system so it can be incorporated into the event readout decision. 
-
-\newpage
+The magnetic field is generated by rectangular superconducting ``toroid magnets" arranged azimuthally in radial planes around the beam axis, which set up a toroidal field concentric to the beam axis. In the region containing the strong field established by the toroid magnets, muon tracks are recorded by three cylindrical layers of muon tracking chambers in the barrel region and three layers of chambers arranged in wheels perpendicular to the beam axis in the end-cap region. Additional layers of fast trigger chambers deliver muon track information to the ATLAS trigger system so it can be incorporated into the event readout decision. 
 
 \section{Ongoing analysis of mono-s(WW) hadronic channel}
+
+This section briefly summarizes the analysis of the hadronic channel, which is currently undergoing  approval within the ATLAS collaboration. 
+
+\subsection{Signal Region Selection}
+
+Selection cuts are applied to the data and MC samples in the ``signal region" with the aim of maximizing the sensitivity of the data to the dark higgs signal of interest in the fully hadronic decay channel. To avoid biasing the selection based on features in the data, the signal region is `blinded', which means that the cuts are developed and optimized using the signal and background MC alone.
+
+Prior to cut optimization, loose pre-selection cuts are applied to broadly capture the region of interest for the search. The pre-selection cuts used by the hadronic analysis are listed in Table \ref{tab:eventselection-baseline}, which is taken from the support note for the hadronic analysis.
+
+\begin{table}[ht]
+    \centering
+    \caption{The baseline selection which is required in all the signal and control regions.}
+    \label{tab:eventselection-baseline}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{ccc}
+    \toprule
+    0 \(\ell\) SR & 1 \(\mu\) control region & 2 \(\ell\) control region \\ \midrule
+    0 baseline \(\ell\) & 0 baseline e,  1 baseline+signal \(\mu\) & 2 baseline+signal \(ee\) / opposite sign \(\mu^{+} \mu^{-}\) \\
+    \met > \SI{200}{\giga\electronvolt}  & \metnomu > \SI{200}{\giga\electronvolt} & \ptll > \SI{200}{\giga\electronvolt}\\
+    \(\tau\) veto & \(\tau\) veto & \(\tau\) veto \\
+    0 \(b\)-tagged VR track jets in event & 0 \(b\)-tagged VR track jets in event & 0 \(b\)-tagged VR track jets in event\\
+    VR track jet \(\Delta R\) overlap veto & VR track jet \(\Delta R\) overlap veto & VR track jet \(\Delta R\) overlap veto \\
+    \(\mindphi > 0.35\) & \(\mindphi > 0.35\) & - \\
+
+    \(\mathcal{S} > 15\) & \(\mathcal{S} > 15\) & \(\mathcal{S} < 15\) \\
+    \(N(\text{small-\(R\) jets}) \geq 2\) &  \(N(\text{small-\(R\) jets}) \geq 2\) &  \(N(\text{small-\(R\) jets}) \geq 2\)
+    \\ \bottomrule
+    \end{tabular}}
+\end{table}
+
+
+
 \begin{itemize}
-\item Preselection
+
 \item Signal region selection
 \item Control regions
 \item Very brief summary of systematics (exp and modeling)
