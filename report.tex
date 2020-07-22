@@ -11,6 +11,7 @@
 \usepackage{bm}
 \usepackage{tabularx}
 \usepackage{makecell}
+\usepackage{url}
 \RequirePackage{booktabs}
 %\usepackage{natbib,hyperref}
 \linenumbers
@@ -24,18 +25,87 @@
 \author{\Large{Candidacy Report} \\
 \\
 Danika MacDonell}
-\title{Search for Dark Matter Produced in Association with a Hypothetical Dark Higgs Boson Decaying to $W^+W^-$ in the $q\bar{q}\ell\nu$ Final State Using $pp$ Collisions Recorded with the ATLAS Detector}
+%\title{Search for Dark Matter Produced in Association with a Hypothetical Dark Higgs Boson Decaying to $W^+W^-$ in the $q\bar{q}\ell\nu$ Final State Using $pp$ Collisions Recorded with the ATLAS Detector}
+\title{Search for Dark Matter Produced in $pp$ Collisions with the ATLAS Detector}
 \begin{document}
 \maketitle
 
 \section{Introduction}
 
-The proposed thesis is a search for dark matter (DM) using high energy proton-proton ($pp$) collision data recorded with the ATLAS detector at the Large Hadron Collider (LHC). The search targets a final state signature of DM production in association with the emission of a hypothetical higgs boson $s$ in the dark sector, which subsequently decays to a pair of W bosons. The search is motivated by and optimized with a ``dark higgs model" \cite{dark_higgs} shown in figure \ref{fig:signal_model}, in which the $s$ is emitted from a hypothetical $Z'$ gauge boson in the dark sector, which itself mediates the production of DM particles from the annihilation of ``initial state quarks" (IS $qq$) constituting the colliding protons.  
+Evidence from observational astronomy indicates that dark matter (DM) constitutes approximately 85\% \cite{planck} of all matter in the universe. Despite clear evidence from observational astronomy for its gravitational interactions with normal matter, DM has yet to be detected by any other means. As such, its composition and non-gravitational interactions - if any - remain largely a mystery. The current most widely accepted and theoretically motivated DM candidates take the form of fundamental particles, yet there are no known particles that could represent a viable DM candidate. DM is therefore widely assumed to be a new massive particle which is not yet explained by the ``Standard Model" of particle physics which describes the properties and interactions of all known particles. 
+
+There is an ongoing dark matter search programme using data from the Large Hadron Collider (LHC) at CERN. The most powerful particle collider in the world, the LHC collides beams of protons near the speed of light with sufficient energy that the high-energy annihilations of quarks constituting the protons can produce massive unstable particles such as the Higgs boson, which cannot presently be produced by any other experimental means. By studying the decay products of massive particles produced at the LHC, experiments such as ATLAS can study hypothesized DM production mechanisms which would proceed via the decay of these massive particles. 
+
+The proposed thesis is a search for dark matter using high energy proton-proton ($pp$) collision data recorded with the ATLAS detector at the LHC. 
+
+\subsection{Introduction to the Standard Model}
+
+The Standard Model (SM) describes all known elementary particles and three of the four known forces by which they interact with one another - the strong, the electromagnetic, and weak forces. The theory of general relativity, which describes the gravitational force, has yet to be explained within the SM. 
+
+The known particles, illustrated in figure \ref{fig:standard_model} are divided into two classes known as ``fermions" and ``bosons" on the basis of an intrinsic form of angular momentum known as spin. Fermions carry spin 1/2 and bosons carry integer spin. 
+
+The specific forces by which particles in the SM interact with one another are determined by the charge(s) that they carry. Particles carrying electric charge interact with other particles carrying this charge via the electromagnetic force. Similarly, particles carrying weak and colour charge interact via the weak and strong forces, respectively. 
+
+Each fermion has a corresponding anti-particle with the same mass, but with opposite values of the charges carries - for example, the electron carries negative electric charge and its antiparticle, the positron, carries positive electric charge. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figures/StandardModel.png}
+	\caption[]{Names and fundamental properties of particles in the Standard Model}
+	\label{fig:standard_model}
+\end{figure}
+
+\subsubsection{Fermions}
+
+Fermions are further sub-divided into leptons and quarks, depending on the charges they carry, and hence the forces by which they interact. There are three known generations of fermions, labelled I, II and III in figure \ref{fig:standard_model}, each with significantly higher mass than the last. Each generation contains a pair of quarks and a pair of leptons, along with their associated antiparticles. The quark pair consists of one ``up-type" quark with positive electric charge and one ``down-type" with negative charge. The lepton pair consists of one charged lepton and one charge-neutral ``neutrino". 
+
+Leptons carry electric charge and weak isospin, and as a result interact with one another and with other particles carrying these charges via the electromagnetic and weak forces, respectively.  
+
+Quarks also carry electric charge and weak isospin, and additionally carry colour charge. The colour charge allows quarks to interact via the strong force, such that quarks interact by all three forces described by the SM. Unlike charged leptons, which carry an electric charge of $\pm$1, quarks are fractionally charged; up-type quarks carry a charge of +2/3 and down-type carry a charge of -1/3.
+
+Due to an effect known as ``colour confinement", quarks cannot exist as stable particles in isolation, and must instead combine with other quarks to form stable ``colour-neutral" states called ``hadrons". The two major forms of hadrons are ``mesons" formed by a quark-antiquark pairs and ``hadrons" formed by three quarks. Due to the strength of the strong interaction, there is a relatively high probability that annihilation products from collisions at the LHC will decay via strong force interactions compared with other forces. As a result, the vast majority of decay products observed in the ATLAS detector are ``jets" of hadrons produced via the strong interaction. 
+
+\subsubsection{Bosons}
+
+Bosons in the SM are divided into ``gauge bosons" and ``scalar bosons". The gauge bosons are spin-1 force carriers which mediate interactions between particles. The photon mediates electromagnetic interactions between electrically charged particles. The gluon mediates the strong interaction between quarks. Unlike photons which are charge-neutral, the gluon itself carries colour charge, which allows it to self-interact via the strong force. The weak force is mediated by three particles: the electrically neutral Z boson, and two W bosons (W$^\pm$) of opposite electric charge of $\pm$1. 
+
+Scalar bosons are defined as spin 0 particles. There is only one known scalar boson in the SM, namely the Higgs boson (or, simply, the ``Higgs"). Other particles in the SM acquire mass via their interaction with the Higgs field. As such, the Higgs only interacts with massive SM particles, which includes all particles except for the photon and the gluon. The more massive the particle, the greater its interaction strength - i.e. probability of interaction - with the Higgs.
+
+\subsubsection{W Boson Decay Mechanisms}
+
+As the proposed DM search channel, introduced in Section 1.2, focuses on DM production in association with a pair of oppositely-charged W bosons, the decays of W bosons described by the SM are briefly introduced here. 
+
+Figure \ref{fig:W_decays} shows the two W boson decay routes. Due to energy and momentum conservation, W bosons can only decay to a pair of particles whose combined mass is smaller than the W mass. Charge conservation additionally requires that the decay products have a combined charge equal to that of the parent W boson. These two requirements allow the W to decay either to a quark-antiquark pair with one up-type quark/antiquark and one down-type, or to a charged lepton (L) and a neutrino ($\nu$).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/W_decays.png}
+	\caption[]{W boson decay mechanisms. Adapted from illustration by Garyzx, distributed under a CC BY-SA 3.0 license.}
+	\label{fig:W_decays}
+\end{figure}
+
+\subsubsection{Cross Section and Luminosity}
+
+Each process of particle production and decay initiated by high-energy particle collisions at the LHC proceeds with a certain probability relative to other processes that could also be initiated by the same collision. The probability that a given process will take place is quantified by its ``cross section". The beam luminosity $\mathcal{L}$ relates the rate of collisions $\frac{dN}{dt}$ which proceed via a given process to the cross section of the process:
+
+\begin{equation}
+\frac{dN}{dt} = \mathcal{L}\sigma
+\end{equation}
+
+The luminosity can be integrated over a period of time $t_1$ to $t_2$, such that the total number of events expected to be produced via a process with cross section $\sigma$ over the given period is related to the ``integrated luminosity" $\mathcal{L}_\text{int}$ by:
+
+\begin{equation}
+N = \sigma\int_{t_1}^{t_2}\mathcal{L}(t)dt = \sigma\mathcal{L}_\text{int}
+\end{equation}
+
+\subsection{Proposed Search for Dark Matter with the ATLAS Detector}
+
+The proposed search targets a final state signature of DM production in association with the emission of a hypothetical Higgs boson $s$ in the dark sector, which subsequently decays to a pair of W bosons. The search is motivated by and optimized with a ``dark Higgs model" \cite{dark_Higgs} shown in figure \ref{fig:signal_model}, in which the $s$ is emitted from a hypothetical $Z'$ gauge boson in the dark sector, which itself mediates the production of DM particles from the annihilation of ``initial state quarks" (IS $qq$) constituting the colliding protons.  
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\textwidth]{figures/Signal_generic.png}
-	\caption[]{Dark higgs model}
+	\caption[]{Dark Higgs model. From left to right: a quark contained within one of the colliding protons collides with an anti-quark in the other proton to form a virtual Z' boson. The virtual Z' boson emits a dark Higgs particle (s) and then decays to a pair of DM particles. The s emitted from the Z' decays into a pair of SM particles via mixing with the SM Higgs boson.}
 	\label{fig:signal_model}
 \end{figure}
 
@@ -47,7 +117,7 @@ Any DM that may be produced in the $qq$ collisions is expected not to interact t
 
 \noindent where the sum is over all visible particles in the event.
 
-The aim of the proposed thesis work is to apply selections, including a requirement of high \met, to data from the ATLAS detector to optimize the sensitivity of the data to the dark higgs signal model. The data will subsequently be compared with standard model (SM) background and signal processes simulated with Monte Carlo to search for an above-background excess in the data consistent with the signal model. 
+The aim of the proposed thesis work is to apply selections, including a requirement of high \met, to data from the ATLAS detector to optimize the sensitivity of the data to the dark Higgs signal model. The data will subsequently be compared with SM background and signal processes simulated with Monte Carlo to search for an above-background excess in the data consistent with the signal model. 
 
 The search is split into two separate analyses:
 
@@ -73,15 +143,19 @@ Despite its lower branching fraction of 0.29 \cite{PDG} compared with the fully 
 
 \end{enumerate}
 
-There is a mature analysis searching for the dark higgs signal in the hadronic decay channel, and the proposed thesis will focus on the semileptonic decay channel. 
+There is a mature analysis searching for the dark Higgs signal in the hadronic decay channel, and the proposed thesis will focus on the semileptonic decay channel. 
 
 The WW decay can also proceed via a fully leptonic channel, in which both W bosons decay to a lepton and a neutrino. This channel would give a clean signature of two leptons and no jets, but is currently not considered as a viable search channel due to its relatively low branching fraction of 0.046 \cite{PDG}.
 
-Once the analysis is fully developed in the semileptonic decay channel, this channel will be statistically combined with the hadronic search channel. In the event that the combined search does not show an above-background excess, the analysis will place exclusion limits - at some specified level of confidence, typically 95\% - on the range of $Z'$ and $s$ masses in the dark higgs model to which the combined search is sensitive.
+%Once the analysis is fully developed in the semileptonic decay channel, this channel will be statistically combined with the hadronic search channel. In the event that the combined search does not show an above-background excess, the analysis will place exclusion limits - at some specified level of confidence, typically 95\% - on the range of $Z'$ and $s$ masses in the dark Higgs model to which the combined search is sensitive.
 
 \section{Motivation}
 
-The proposed thesis work would contribute to the extensive ongoing DM search program at the LHC. The LHC search program is motivated by compelling evidence from observational astronomy for the existence of DM constituting 85\% \cite{planck} of all matter in the universe. Despite clear evidence from observational astronomy for its gravitational interactions with normal matter, DM has yet to be detected through the weak, strong or electromagnetic interactions. As such, its composition and non-gravitational interactions - if any - remain largely a mystery. The current most widely accepted and theoretically motivated DM candidates take the form of fundamental particles, yet there is no particle in the standard model of particle physics that could represent a viable DM candidate \cite{feng}. DM is therefore widely assumed to be a ``beyond-standard-model" (BSM) particle. 
+The proposed thesis work would contribute to the extensive ongoing DM search program at the LHC. The LHC search program aims detect and study DM to better understand the fundamental properties and interactions of this dominant but highly elusive form of matter in the universe. 
+
+%compelling evidence from observational astronomy for the existence of DM constituting the majority all matter in the universe.
+%Despite clear evidence from observational astronomy for its gravitational interactions with normal matter, DM has yet to be detected through the weak, strong or electromagnetic interactions. As such, its composition and non-gravitational interactions - if any - remain largely a mystery. 
+%The current most widely accepted and theoretically motivated DM candidates take the form of fundamental particles, yet there is no particle in the Standard Model of particle physics that could represent a viable DM candidate \cite{feng}. DM is therefore widely assumed to be a ``beyond-standard-model" (BSM) particle. 
 
 \subsection{Dark Matter Search Methods}
 There are three complementary approaches used to search for particle DM: direct and indirect detection, and collider searches. Direct detection searches \cite{Schumann_2019, 2015gya} aim to directly detect evidence of a recoil induced by elastic scattering between a DM particle in the galactic halo passing through the detector and a target particle in the detector. Indirect searches \cite{CIRELLI_2012, conrad} use observational data to search for evidence of products produced by DM annihilation or decay in particular regions of the observable universe expected to have a high DM density. Collider searches \cite{DM_colliders}, of which the proposed thesis work is an example, study the decay products from high-energy collisions of subatomic particles to search for an above-background excess of events that could be consistent with DM having been produced in some of the collisions.
@@ -109,27 +183,27 @@ Simplified models, widely used in recent and ongoing DM searches at the LHC, are
 
 \subsection{Dark Higgs Model}
 
-The proposed search is motivated by and interpreted with a simplified model described in \cite{dark_higgs} where DM is pair produced from a Z boson in the dark sector - known as the $Z'$ boson - in association with the emission of a dark sector higgs boson $s$. Figure \ref{fig:signal_model} shows one of the leading order Feynman diagram representing this simplified model. The dark sector higgs boson subsequently decays to a pair of massive SM particles through a small mixing with the SM higgs boson. 
+The proposed search is motivated by and interpreted with a simplified model described in \cite{dark_Higgs} where DM is pair produced from a Z boson in the dark sector - known as the $Z'$ boson - in association with the emission of a dark sector Higgs boson $s$. Figure \ref{fig:signal_model} shows one of the leading order Feynman diagram representing this simplified model. The dark sector Higgs boson subsequently decays to a pair of massive SM particles through a small mixing with the SM Higgs boson. 
 
 The generic hypothesis of `dark sector' mediators which exhibit a small mixing with SM particles is motivated in part by the theoretical need for creation and annihilation mechanisms between DM and SM particles in the well-motivated and popular `thermal freeze-out' hypothesis \cite{particle_dm}. In the thermal freeze-out hypothesis, DM and SM particles interacted at a sufficient rate in the high temperature and matter density of the early universe to remain in thermal equilibrium. Once the DM-SM interaction rate dropped below the expansion rate of the universe, the DM rapidly ``froze out" of thermal equilibrium with the SM particles, at which point the relic abundance of DM was fixed to the value observed in the present-day universe.
 
-The dark higgs boson in particular is motivated by the need to generate the masses of DM and any other particles residing in the dark sector \cite{dark_higgs}. If dark sector particle masses are generated via a `dark sector higgs mechanism', this would naturally imply the existence of a dark higgs boson. 
+The dark Higgs boson in particular is motivated by the need to generate the masses of DM and any other particles residing in the dark sector \cite{dark_Higgs}. If dark sector particle masses are generated via a `dark sector Higgs mechanism', this would naturally imply the existence of a dark Higgs boson. 
 
-The model presented in \cite{dark_higgs} considers a scenario in which there is another dark sector mediator - taken to be the $Z'$ - with a mass within the range accessible to measurement at the LHC, which mediates DM production from parton collisions. In this case, the $Z'$ could radiate a dark higgs boson. Theoretically, the observed relic abundance of DM in the universe suggests that couplings between particles in the dark sector should be quite large, which could result in a sufficiently high probability of dark higgs emission from the $Z'$ to produce a measurable signature in LHC collisions \cite{dark_higgs}. 
+The model presented in \cite{dark_Higgs} considers a scenario in which there is another dark sector mediator - taken to be the $Z'$ - with a mass within the range accessible to measurement at the LHC, which mediates DM production from parton collisions. In this case, the $Z'$ could radiate a dark Higgs boson. Theoretically, the observed relic abundance of DM in the universe suggests that couplings between particles in the dark sector should be quite large, which could result in a sufficiently high probability of dark Higgs emission from the $Z'$ to produce a measurable signature in LHC collisions \cite{dark_Higgs}. 
 
-Experimentally, the dark higgs signature would be distinct from generic mono-X signatures where the SM particle that the DM recoils against is produced via initial state radiation (as shown in figure \ref{fig:eft_simplified_model}, because as long as the mass of the $s$ is well below the typical momentum transfer of the collisions, the $s$ will tend to be highly boosted in the plane transverse to the beam line. As a result, the SM decay products will tend to be much higher in transverse momentum and highly collimated compared with particles produced via initial state radiation.  
+Experimentally, the dark Higgs signature would be distinct from generic mono-X signatures where the SM particle that the DM recoils against is produced via initial state radiation (as shown in figure \ref{fig:eft_simplified_model}, because as long as the mass of the $s$ is well below the typical momentum transfer of the collisions, the $s$ will tend to be highly boosted in the plane transverse to the beam line. As a result, the SM decay products will tend to be much higher in transverse momentum and highly collimated compared with particles produced via initial state radiation.  
 
 \subsection{Experimental Background}
 
-This section discusses a previous experimental search which set exclusion limits on the dark higgs model described in Section 2.3, in the case where the dark higgs decays to a pair of b quarks. It goes on to describe the m$_\text{S}$ range that the ongoing and proposed searches in the $s \rightarrow WW$ decay channel target, and explain how this target is complementary to the m$_\text{S}$ range explored by the previous search in the $s \rightarrow bb$ channel. 
+This section discusses a previous experimental search which set exclusion limits on the dark Higgs model described in Section 2.3, in the case where the dark Higgs decays to a pair of b quarks. It goes on to describe the m$_\text{S}$ range that the ongoing and proposed searches in the $s \rightarrow WW$ decay channel target, and explain how this target is complementary to the m$_\text{S}$ range explored by the previous search in the $s \rightarrow bb$ channel. 
 
 \subsubsection{Re-interpretation of Mono-H(bb) Search with a Dark Higgs Mediator}
 
-Last year, the ``mono-H(bb)" DM search, originally published in 2018 \cite{monohbb} with 79.8 fb$^{-1}$ of data taken with the ATLAS detector at a 13 TeV centre of mass energy, was re-interpreted \cite{monohbb_recast} using the RECAST framework \cite{recast} to set exclusion limits on the dark higgs model in the case of the dark higgs decaying to a pair of b-quarks. 
+Last year, the ``mono-H(bb)" DM search, originally published in 2018 \cite{monohbb} with 79.8 fb$^{-1}$ of data taken with the ATLAS detector at a 13 TeV centre of mass energy, was re-interpreted \cite{monohbb_recast} using the RECAST framework \cite{recast} to set exclusion limits on the dark Higgs model in the case of the dark Higgs decaying to a pair of b-quarks. 
 
-The mono-H(bb) search selects for a final state of missing transverse energy along with two jets in the calorimeter, both of which must be tagged as having originated from the hadronization of b quarks. When the mono-H(bb) analysis was originally published, it had been developed and interpreted using a simplified model shown in figure \ref{fig:monohbbreinterp} left, in which the DM is pair produced from a new pseudoscalar higgs boson, along with the emission of a SM higgs boson, which subsequently decays to two b quarks.  
+The mono-H(bb) search selects for a final state of missing transverse energy along with two jets in the calorimeter, both of which must be tagged as having originated from the hadronization of b quarks. When the mono-H(bb) analysis was originally published, it had been developed and interpreted using a simplified model shown in figure \ref{fig:monohbbreinterp} left, in which the DM is pair produced from a new pseudoscalar Higgs boson, along with the emission of a SM Higgs boson, which subsequently decays to two b quarks.  
 
-The original analysis was preserved using RECAST \cite{recast}, a framework designed to preserve searches for new physics with high energy collision data in such a way that the searches can be readily re-analyzed with alternative models of new physics which predict the same final state signature. The RECAST framework was used to re-interpret the mono-H(bb) search using the dark higgs model shown in figure \ref{fig:monohbbreinterp} right, where the dark higgs, whose mass is left as a floating parameter, decays to a pair of b quarks. 
+The original analysis was preserved using RECAST \cite{recast}, a framework designed to preserve searches for new physics with high energy collision data in such a way that the searches can be readily re-analyzed with alternative models of new physics which predict the same final state signature. The RECAST framework was used to re-interpret the mono-H(bb) search using the dark Higgs model shown in figure \ref{fig:monohbbreinterp} right, where the dark Higgs, whose mass is left as a floating parameter, decays to a pair of b quarks. 
 
 \begin{figure}[H]
 	\centering
@@ -139,40 +213,40 @@ The original analysis was preserved using RECAST \cite{recast}, a framework desi
 	\begin{minipage}[b]{0.45\textwidth}
 	\includegraphics[width=0.9\textwidth]{figures/monosbb}
 	\end{minipage}
-	\caption[]{Left: Leading-order Feynman diagram representing the model used to interpret the mono-H(bb) DM search. Right: A leading-order Feynam diagram representing the model used to guide and interpret the mono-s(bb) re-interpretation of the mono-H(bb) search. The dark higgs mediator mass m$_\text{S}$ is allowed to float in the dark higgs model.}
+	\caption[]{Left: Leading-order Feynman diagram representing the model used to interpret the mono-H(bb) DM search. Right: A leading-order Feynam diagram representing the model used to guide and interpret the mono-s(bb) re-interpretation of the mono-H(bb) search. The dark Higgs mediator mass m$_\text{S}$ is allowed to float in the dark Higgs model.}
 	\label{fig:monohbbreinterp}
 \end{figure}
 
-The re-interpreted mono-H(bb) search set limits, shown in figure \ref{fig:monosbb_exclusion}, on the phase space of $Z'$ and $s$ masses excluded by the data. To set these exclusion limits, several free parameters in the dark higgs model need to be fixed, as detailed in Section 6.1.1.
+The re-interpreted mono-H(bb) search set limits, shown in figure \ref{fig:monosbb_exclusion}, on the phase space of $Z'$ and $s$ masses excluded by the data. To set these exclusion limits, several free parameters in the dark Higgs model need to be fixed, as detailed in Section 6.1.1.
 %
 %\begin{itemize}
 %\item The DM mass m$_\chi$ is fixed to 200 GeV.
 %\item The constant g$_q$ associated with the coupling of the $Z'$ boson to quarks is fixed to 0.25.
 %\item The constant g$_\chi$ associated with the coupling of the $Z'$ boson to DM is fixed to 1.0.
-%\item The mixing angle $\theta$ between the dark and SM higgs bosons is fixed to 0.01.
+%\item The mixing angle $\theta$ between the dark and SM Higgs bosons is fixed to 0.01.
 %\end{itemize}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{figures/monosbb_exclusion.png}
-	\caption[]{Exclusion limits set on the $Z'$ and $s$ mediator masses by the mono-H(bb) search re-interpreted with the dark higgs model. Mass combinations to the left of the solid black curve are excluded at a 95\% confidence level. Source: \cite{monohbb_recast}}
+	\caption[]{Exclusion limits set on the $Z'$ and $s$ mediator masses by the mono-H(bb) search re-interpreted with the dark Higgs model. Mass combinations to the left of the solid black curve are excluded at a 95\% confidence level. Source: \cite{monohbb_recast}}
 	\label{fig:monosbb_exclusion}
 \end{figure}
 
-%The values of $g_q$ and $g_\chi$ were chosen to match the conventional choices used by other LHC DM searches, and $\theta$ matches the choice used in the original paper \cite{dark_higgs} that introduced the dark higgs model.
+%The values of $g_q$ and $g_\chi$ were chosen to match the conventional choices used by other LHC DM searches, and $\theta$ matches the choice used in the original paper \cite{dark_Higgs} that introduced the dark Higgs model.
 
 \subsubsection{Dark Higgs Decay Modes}
 
-The re-interpreted mono-H(bb) search probed the dark higgs model in the case where the $s$ emitted from the $Z'$ mediator decays to a pair of b quarks. However, predictions of the dark higgs branching ratio presented in the re-interpretation paper \cite{monohbb_recast} and shown in figure \ref{fig:higgsbrs} indicate that the $s \rightarrow bb$ decay mode is only sensitive to a range of dark higgs masses up to $\sim$150 GeV, above which the WW decay mode dominates in sensitivity. 
+The re-interpreted mono-H(bb) search probed the dark Higgs model in the case where the $s$ emitted from the $Z'$ mediator decays to a pair of b quarks. However, predictions of the dark Higgs branching ratio presented in the re-interpretation paper \cite{monohbb_recast} and shown in figure \ref{fig:Higgsbrs} indicate that the $s \rightarrow bb$ decay mode is only sensitive to a range of dark Higgs masses up to $\sim$150 GeV, above which the WW decay mode dominates in sensitivity. 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{figures/BR_vs_mass.png}
-	\caption[]{Predicted dark higgs decay branching ratios as a function of dark higgs mass. Source: \cite{monohbb_recast} }
-	\label{fig:higgsbrs}
+	\caption[]{Predicted dark Higgs decay branching ratios as a function of dark Higgs mass. Source: \cite{monohbb_recast} }
+	\label{fig:Higgsbrs}
 \end{figure}
 
-There is no a-priori reason to expect the dark higgs mass m$_\text{S}$ to necessarily lie below 150 GeV. Therefore, it's important to probe the model in the higher m$_\text{S}$ range by analyzing the $s \rightarrow WW$ decay mode. The proposed thesis work will analyze the latter decay mode using the full 139 fb$^{-1}$ ATLAS run 2 dataset, focusing on the semileptonic final state $WW \rightarrow q\bar{q}\ell\nu$.
+There is no a-priori reason to expect the dark Higgs mass m$_\text{S}$ to necessarily lie below 150 GeV. Therefore, it's important to probe the model in the higher m$_\text{S}$ range by analyzing the $s \rightarrow WW$ decay mode. The proposed thesis work will analyze the latter decay mode using the full 139 fb$^{-1}$ ATLAS run 2 dataset, focusing on the semileptonic final state $WW \rightarrow q\bar{q}\ell\nu$.
 
 \section{Introduction to the LHC and the ATLAS detector}
 
@@ -226,18 +300,18 @@ The kinematic distributions of reconstruction-level events, scaled by the integr
 
 \section{Ongoing Search for the Dark Higgs Model in the Hadronic Decay Channel}
 
-This section briefly summarizes the ``mono-s(WW)" search for the dark higgs model in the fully-hadronic final state channel, which is currently undergoing review within the ATLAS collaboration. MC simulated samples were generated for the dark higgs model over the grid of dark higgs and Z' boson masses shown in figure \ref{fig:had_grid}. 
+This section briefly summarizes the ``mono-s(WW)" search for the dark Higgs model in the fully-hadronic final state channel, which is currently undergoing review within the ATLAS collaboration. MC simulated samples were generated for the dark Higgs model over the grid of dark Higgs and Z' boson masses shown in figure \ref{fig:had_grid}. 
 
  \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{figures/had_grid.png}
-	\caption[]{Grid of signal models generated using MC for the hadronic mono-s(WW) analysis at various dark higgs and Z' boson masses. Red points are simulated with all three possible WW decay channels ($WW \rightarrow qqqq$, $WW \rightarrow qq\ell\nu$ and $WW \rightarrow \ell\nu\ell\nu$) and blue points are simulated exclusively with fully hadronic WW decays ($WW \rightarrow qqqq$) to save computing time.}
+	\caption[]{Grid of signal models generated using MC for the hadronic mono-s(WW) analysis at various dark Higgs and Z' boson masses. Red points are simulated with all three possible WW decay channels ($WW \rightarrow qqqq$, $WW \rightarrow qq\ell\nu$ and $WW \rightarrow \ell\nu\ell\nu$) and blue points are simulated exclusively with fully hadronic WW decays ($WW \rightarrow qqqq$) to save computing time.}
 	\label{fig:had_grid} 
 \end{figure}
 
 \subsection{Signal Region Selection}
 
-Selection cuts are applied to the data and MC samples in the ``signal region" (SR) with the aim of maximizing the sensitivity of the data to the dark higgs signal of interest in the fully hadronic decay channel. To avoid biasing the selection based on features in the data, the SR is `blinded', which means that the cuts are developed and optimized using the signal and background MC alone.
+Selection cuts are applied to the data and MC samples in the ``signal region" (SR) with the aim of maximizing the sensitivity of the data to the dark Higgs signal of interest in the fully hadronic decay channel. To avoid biasing the selection based on features in the data, the SR is `blinded', which means that the cuts are developed and optimized using the signal and background MC alone.
 
 \subsubsection{Pre-selection}
 
@@ -341,7 +415,7 @@ Control regions (CRs) are designed to provide data-driven normalization constrai
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{figures/had_Intermediate_DataMC.png}
-	\caption[]{Data-MC comparisons of reconstructed dark higgs candidate mass distributions in the intermediate kinematic category of the 1-lepton (left) and 2-lepton (right) CRs}.
+	\caption[]{Data-MC comparisons of reconstructed dark Higgs candidate mass distributions in the intermediate kinematic category of the 1-lepton (left) and 2-lepton (right) CRs}.
 	\label{fig:had_Intermediate_DataMC} 
 \end{figure}
 
@@ -369,7 +443,7 @@ For the W+jets and Z+jets background processes, which are nominally modelled wit
 
 \subsection{Sensitivity Estimates}
 
-To estimate the sensitivity of the search in the hadronic channel, the data is binned in \met and dark higgs candidate mass. Mock binned data is generated for each signal point to be statistically consistent with the simulated SM background. The SM background and signal model are then fit to this mock background-only data for events passing the event selection criteria. The W+jets and Z+jets background shapes are obtained from MC, and their normalization factors from the 1-lepton and 2-lepton CRs, respectively. 
+To estimate the sensitivity of the search in the hadronic channel, the data is binned in \met and dark Higgs candidate mass. Mock binned data is generated for each signal point to be statistically consistent with the simulated SM background. The SM background and signal model are then fit to this mock background-only data for events passing the event selection criteria. The W+jets and Z+jets background shapes are obtained from MC, and their normalization factors from the 1-lepton and 2-lepton CRs, respectively. 
 
 The fit is used to obtain a CLs value \cite{PDG_stats} for each signal point, defined as:
 
@@ -390,22 +464,22 @@ The CLs can also be expressed as a ``significance" by treating the CLs as a p-va
 
 \section{Search for the Dark Higgs Model in the Semileptonic Decay Channel}
 
-The proposed thesis will focus on the search for the dark higgs model in the semileptonic $WW\rightarrow qq\ell\nu$ decay channel. This section summarizes the current status of ongoing analysis work in this channel. 
+The proposed thesis will focus on the search for the dark Higgs model in the semileptonic $WW\rightarrow qq\ell\nu$ decay channel. This section summarizes the current status of ongoing analysis work in this channel. 
 
 \subsection{Signal Sample Generation}
 
 \subsubsection{Parameter Choices}
 
-MC signal samples for the dark higgs model with s$\rightarrow$WW decay are generated over a range of m($s$) and m($Z'$) for which the analysis is expected to be sensitive to the model. There are several other free parameters in the dark higgs model which need to be fixed to perform the scan. The parameter choices are identical to those used for the re-interpreted mono-H(bb) search described in Section 2.4.1:
+MC signal samples for the dark Higgs model with s$\rightarrow$WW decay are generated over a range of m($s$) and m($Z'$) for which the analysis is expected to be sensitive to the model. There are several other free parameters in the dark Higgs model which need to be fixed to perform the scan. The parameter choices are identical to those used for the re-interpreted mono-H(bb) search described in Section 2.4.1:
 
 \begin{itemize}
 	\item Coupling $g_{q}$ of the Z' boson to quarks: 1 
 	\item Coupling $g_{\chi}$ of the Z' boson to DM: 0.25
 	\item DM mass $m_{\chi} = 200$ GeV
-	\item Mixing angle $\theta$ between the SM and dark sector higgs bosons: 0.01
+	\item Mixing angle $\theta$ between the SM and dark sector Higgs bosons: 0.01
 \end{itemize}
 
-The values of $g_q$, $g_\chi$ and $m_\chi$, listed above are standard choices used by many other LHC searches. The use of standard parameter choices facilitates comparisons and combinations of search results between different analyses. The value of $\theta$ was chosen from the approximate range of 0.01-0.1 suggested by the authors of the phenomenology paper \cite{dark_higgs} in which the model is introduced. It is discussed in the paper that the precise value of the mixing angle is not important for the analysis. It need only be sufficiently large that the dark higgs will decay promptly and sufficiently small as to avoid constraints from existing measurements of the SM Higgs couplings \cite{Aad_2016}. 
+The values of $g_q$, $g_\chi$ and $m_\chi$, listed above are standard choices used by many other LHC searches. The use of standard parameter choices facilitates comparisons and combinations of search results between different analyses. The value of $\theta$ was chosen from the approximate range of 0.01-0.1 suggested by the authors of the phenomenology paper \cite{dark_Higgs} in which the model is introduced. It is discussed in the paper that the precise value of the mixing angle is not important for the analysis. It need only be sufficiently large that the dark Higgs will decay promptly and sufficiently small as to avoid constraints from existing measurements of the SM Higgs couplings \cite{Aad_2016}. 
 
 \subsubsection{Semileptonic Signal Grid}
 
@@ -416,13 +490,13 @@ Work is ongoing to re-generate the grid with a more recent release of the ATLAS 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{figures/SignalGrid_simple.png}
-	\caption[]{Grid of signal points with respect to dark higgs (s) and $Z'$ boson masses}
+	\caption[]{Grid of signal points with respect to dark Higgs (s) and $Z'$ boson masses}
 	\label{fig:signalgrid}
 \end{figure}
 
 \subsection{Event Selection for the Semileptonic Channel}
 
-This section describes the current event selection used to optimize the sensitivity of the analysis to the dark higgs signal with semileptonic WW decay. The selection is in the process of being refined, so many details presented here are preliminary and will likely evolve as the ongoing refinements progress. 
+This section describes the current event selection used to optimize the sensitivity of the analysis to the dark Higgs signal with semileptonic WW decay. The selection is in the process of being refined, so many details presented here are preliminary and will likely evolve as the ongoing refinements progress. 
 
 \subsubsection{Pre-selection}
 
@@ -524,7 +598,7 @@ At least 1 large-radius jet & -      \\ \hline
 \met $>$ 300 GeV      & -      \\ \hline
 Reconstructed mass of large-radius jet $\in$ [60 GeV, 100 GeV]     & Increases the likelihood that the selected large-R jet originates from a W boson.        \\ \hline
 \met significance $>$ 15    &  -        \\ \hline
-$\Delta R(\ell$, large-R jets) $<$ 1.6    & $\Delta R = \sqrt{\Delta\phi^2+\Delta\eta^2}$ is the angular distance between the lepton and the large-radius jet, where $\Delta\phi$ is the angular separation in the transverse plane and pseudorapidity $\eta$ is a quantity related to the angle $\theta$ of a particle relative to the beam axis: $\eta=-\ln\Big[\tan\Big(\frac{\theta}{2}\Big)\Big]$. Pseudorapidity is used rather than $\theta$ because differences $\Delta\eta$ in pseudorapidity are invariant under lorentz boosts. An upper bound is placed on the angular distance to select for the boosted topology of interest, in which all decay products of the dark higgs boson are boosted in approximately the same direction.      \\ \hline
+$\Delta R(\ell$, large-R jets) $<$ 1.6    & $\Delta R = \sqrt{\Delta\phi^2+\Delta\eta^2}$ is the angular distance between the lepton and the large-radius jet, where $\Delta\phi$ is the angular separation in the transverse plane and pseudorapidity $\eta$ is a quantity related to the angle $\theta$ of a particle relative to the beam axis: $\eta=-\ln\Big[\tan\Big(\frac{\theta}{2}\Big)\Big]$. Pseudorapidity is used rather than $\theta$ because differences $\Delta\eta$ in pseudorapidity are invariant under lorentz boosts. An upper bound is placed on the angular distance to select for the boosted topology of interest, in which all decay products of the dark Higgs boson are boosted in approximately the same direction.      \\ \hline
 $D_{2}$ of leading large-R jet $<$ 1.4   & The $D_{2}$ variable \cite{Marzani_2019} uses energy correlation functions to give a measure of the likelihood that a jet contains only two spatially separated energy sources. This allows the semileptonic signal channel - in which only two dominant energy sources (i.e. ``prongs") would be expected due to the $W\rightarrow qq$ decay - to be separated from the QCD background which may contain many such prongs.     \\ \hline
 \end{tabular}
 \end{footnotesize}
@@ -687,7 +761,7 @@ Figure \ref{fig:sensitivity_full} shows the sensitivity estimate for the combine
 
 \section{Remaining Work and Outlook}
 
-The analysis of the dark higgs signal model in the semileptonic WW decay channel continues to be developed and optimized. Preliminary sensitivity estimates suggest that this decay channel could offer valuable sensitivity to the model in addition to the hadronic channel currently nearing completion. The proposed thesis work will involve developing the analysis in the semileptonic channel in close collaboration with several colleagues here at UVic and at LMU in Munich. 
+The analysis of the dark Higgs signal model in the semileptonic WW decay channel continues to be developed and optimized. Preliminary sensitivity estimates suggest that this decay channel could offer valuable sensitivity to the model in addition to the hadronic channel currently nearing completion. The proposed thesis work will involve developing the analysis in the semileptonic channel in close collaboration with several colleagues here at UVic and at LMU in Munich. 
 
 In addition to leading the UVic effort on this analysis, I share the role of ``analysis contact" with a colleague at LMU. The primary purpose of the analysis contact role is to liaise on behalf of the analysis group with conveners and other members of the wider analysis groups in ATLAS to which the analysis belongs. 
 
@@ -705,7 +779,7 @@ The second approach is to split the electron and muon channels for cut optimizat
 
 \subsection{Signal Discrimination Variables}
 
-Studies are ongoing to identify or develop variables which could offer useful discrimination between signal and background in the semileptonic SR. These include jet substructure variables to help distinguish large-R jets produced by a boosted $W\rightarrow qq$ decay from eg. the QCD quark pair production in the W+jets background, as well as approaches to computing a reconstructed dark higgs mass that account for the presence of neutrino-induced \met\!. Once these studies are complete, a set of selection variables will be chosen which exhibit the best discrimination between signal and background. The expected signal significances will be evaluated for various ranges of cut combinations on the chosen variables within each SR (eg. the merged category of the muon channel)  to determine the optimal cut placements. The expected signal significance is defined as \cite{cowandiscovery}:
+Studies are ongoing to identify or develop variables which could offer useful discrimination between signal and background in the semileptonic SR. These include jet substructure variables to help distinguish large-R jets produced by a boosted $W\rightarrow qq$ decay from eg. the QCD quark pair production in the W+jets background, as well as approaches to computing a reconstructed dark Higgs mass that account for the presence of neutrino-induced \met\!. Once these studies are complete, a set of selection variables will be chosen which exhibit the best discrimination between signal and background. The expected signal significances will be evaluated for various ranges of cut combinations on the chosen variables within each SR (eg. the merged category of the muon channel)  to determine the optimal cut placements. The expected signal significance is defined as \cite{cowandiscovery}:
 
 \begin{equation}
   Z = \sqrt{2\left[
